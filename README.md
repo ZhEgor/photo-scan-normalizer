@@ -106,9 +106,3 @@ disables the whole step.
 - Photos that are already straight and upright are cropped without any
   resampling, so their pixels are untouched. Rotations by 90 degrees are pure
   pixel permutations; only deskewing resamples.
-
-## Tests
-
-```bash
-uv run pytest
-```
