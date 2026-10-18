@@ -1,0 +1,14 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "deepseek/deepseek-flash",
+  "small_model": "deepseek/deepseek-flash",
+  "permissions": [
+    { "action": "edit", "resource": "*", "effect": "allow" },
+    { "action": "skill", "resource": "*", "effect": "allow" },
+    { "action": "subagent", "resource": "*", "effect": "allow" },
+    { "action": "shell", "resource": "./gradlew*", "effect": "allow" },
+    { "action": "shell", "resource": "adb *", "effect": "allow" },
+    { "action": "shell", "resource": "openspec *", "effect": "allow" },
+    { "action": "shell", "resource": "git *", "effect": "allow" }
+  ]
+}

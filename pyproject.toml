@@ -1,0 +1,29 @@
+[project]
+name = "photo-scan-normalizer"
+version = "0.1.0"
+description = "Split scanned sheets that contain several photos into separate, deskewed image files."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.26",
+    "opencv-python-headless>=4.9",
+]
+
+[project.scripts]
+photosplit = "photosplit.cli:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/photosplit"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["tests"]
